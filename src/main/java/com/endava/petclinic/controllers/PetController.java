@@ -17,13 +17,16 @@ public class PetController {
     public PetController() {
     }
 
-    public static Pet generateNewRandomPet(Owner owner, PetType type) {
+    public static Pet generateNewRandomPet() {
         Faker faker = new Faker();
         Pet pet = new Pet();
-        pet.setName(faker.funnyName().name());
-        pet.setBirthDate(faker.date().birthday().toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime().format(DateTimeFormatter.ofPattern("yyyy/MM/dd")));
-        pet.setOwner(owner);
-        pet.setType(type);
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd");
+
+        pet.setName(faker.dog().name());
+        pet.setOwner(OwnerController.generateNewRandomOwner());
+        pet.setType(new PetType(faker.animal().name()));
+        pet.setBirthDate(formatter.format(faker.date().birthday(1, 10)));
+
         return pet;
     }
 }

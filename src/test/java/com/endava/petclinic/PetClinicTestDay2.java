@@ -165,133 +165,133 @@ public class PetClinicTestDay2 {
 //        assertThat(typeFromGetResponse, is(type));
 //    }
 
-    @Test
-    public void addPet() {
-
-        Owner owner = new Owner();
-        owner.setId(202);
-        owner.setFirstName("Shizuko");
-        owner.setLastName("Schoen");
-        owner.setAddress("52643 Franecki Burgs");
-        owner.setCity("Lake Kyra");
-        owner.setTelephone("2132146992");
-
-        PetType type = new PetType();
-        type.setId(28);
-        type.setName("deer");
-
-        Faker faker = new Faker();
-        Pet pet = PetController.generateNewRandomPet(owner, type);
-
-        ValidatableResponse response = given().baseUri(EnvReader.getBaseUri())
-                .port(EnvReader.getPort())
-                .basePath(EnvReader.getBasePath())
-                .contentType(ContentType.JSON)
-                .body(pet)
-                .when().log().all()
-                .post("/api/pets").prettyPeek()
-                .then()
-                .statusCode(HttpStatus.SC_CREATED);
-
-        pet.setId(response.extract().jsonPath().getInt("id"));
-
-        given().baseUri(EnvReader.getBaseUri())
-                .basePath(EnvReader.getBasePath())
-                .port(EnvReader.getPort())
-                .pathParam("petId", pet.getId())
-                .when()
-                .get("/api/pets/{petId}").prettyPeek()
-                .then()
-                .statusCode(HttpStatus.SC_OK)
-                .body("id", is(pet.getId()));
-  }
-
-    @Test
-    public void getPetList() {
-        given().baseUri(EnvReader.getBaseUri())
-                .basePath(EnvReader.getBasePath())
-                .port(EnvReader.getPort())
-                //  .pathParam("petId", 0)
-                .when().log().all()
-                .get("/api/pets")
-                .prettyPeek()
-                .then()
-                .statusCode(HttpStatus.SC_OK);
-
-    }
-
-    @Test
-    public void postPetTestWithObject() {
-        Owner owner = new Owner();
-        owner.setId(202);
-        owner.setFirstName("Shizuko");
-        owner.setLastName("Schoen");
-        owner.setAddress("52643 Franecki Burgs");
-        owner.setCity("Lake Kyra");
-        owner.setTelephone("2132146992");
-
-        PetType type = new PetType();
-        type.setId(28);
-        type.setName("deer");
-        Faker faker = new Faker();
-        Pet pet = PetController.generateNewRandomPet(owner, type);
-
-        ValidatableResponse response = given().baseUri(EnvReader.getBaseUri())
-                .basePath(EnvReader.getBasePath())
-                .port(EnvReader.getPort())
-                .contentType(ContentType.JSON)
-                .body(pet).log().all()
-                .when()
-                .post("/api/pets").prettyPeek()
-                .then()
-                .statusCode(HttpStatus.SC_CREATED);
-    }
-
-    @Test
-    public void addVisit() {
-
-        Owner owner = new Owner();
-        owner.setId(202);
-        owner.setFirstName("Shizuko");
-        owner.setLastName("Schoen");
-        owner.setAddress("52643 Franecki Burgs");
-        owner.setCity("Lake Kyra");
-        owner.setTelephone("2132146992");
-
-        PetType type = new PetType();
-        type.setId(28);
-        type.setName("deer");
-
-        Pet pet = new Pet();
-        pet.setId(97);
-        pet.setName("Crystal Ball");
-        pet.setType(type);
-        pet.setOwner(owner);
-        pet.setBirthDate("1988/11/02");
-
-        Faker faker = new Faker();
-        Visit visit = VisitController.generateNewRandomVisit(pet, type);
-
-        ValidatableResponse response = given().baseUri(EnvReader.getBaseUri())
-                .port(EnvReader.getPort())
-                .basePath(EnvReader.getBasePath())
-                .contentType(ContentType.JSON)
-                .body(visit)
-                .when().log().all()
-                .post("/api/visits").prettyPeek()
-                .then()
-                .statusCode(HttpStatus.SC_CREATED);
-
-        visit.setId(response.extract().jsonPath().getInt("id"));
-
-        given().baseUri(EnvReader.getBaseUri())
-                .basePath(EnvReader.getBasePath())
-                .port(EnvReader.getPort())
-                .pathParam("visitId", visit.getId())
-                .when()
-                .get("/api/visits/{visitId}").prettyPeek()
-                .then()
-                .statusCode(HttpStatus.SC_OK)
-                .body("id", is(visit.getId()));
-    }
+//    @Test
+//    public void addPet() {
+//
+//        Owner owner = new Owner();
+//        owner.setId(202);
+//        owner.setFirstName("Shizuko");
+//        owner.setLastName("Schoen");
+//        owner.setAddress("52643 Franecki Burgs");
+//        owner.setCity("Lake Kyra");
+//        owner.setTelephone("2132146992");
+//
+//        PetType type = new PetType();
+//        type.setId(28);
+//        type.setName("deer");
+//
+//        Faker faker = new Faker();
+//        Pet pet = PetController.generateNewRandomPet(owner, type);
+//
+//        ValidatableResponse response = given().baseUri(EnvReader.getBaseUri())
+//                .port(EnvReader.getPort())
+//                .basePath(EnvReader.getBasePath())
+//                .contentType(ContentType.JSON)
+//                .body(pet)
+//                .when().log().all()
+//                .post("/api/pets").prettyPeek()
+//                .then()
+//                .statusCode(HttpStatus.SC_CREATED);
+//
+//        pet.setId(response.extract().jsonPath().getInt("id"));
+//
+//        given().baseUri(EnvReader.getBaseUri())
+//                .basePath(EnvReader.getBasePath())
+//                .port(EnvReader.getPort())
+//                .pathParam("petId", pet.getId())
+//                .when()
+//                .get("/api/pets/{petId}").prettyPeek()
+//                .then()
+//                .statusCode(HttpStatus.SC_OK)
+//                .body("id", is(pet.getId()));
+//  }
+//
+//    @Test
+//    public void getPetList() {
+//        given().baseUri(EnvReader.getBaseUri())
+//                .basePath(EnvReader.getBasePath())
+//                .port(EnvReader.getPort())
+//                //  .pathParam("petId", 0)
+//                .when().log().all()
+//                .get("/api/pets")
+//                .prettyPeek()
+//                .then()
+//                .statusCode(HttpStatus.SC_OK);
+//
+//    }
+//
+//    @Test
+//    public void postPetTestWithObject() {
+//        Owner owner = new Owner();
+//        owner.setId(202);
+//        owner.setFirstName("Shizuko");
+//        owner.setLastName("Schoen");
+//        owner.setAddress("52643 Franecki Burgs");
+//        owner.setCity("Lake Kyra");
+//        owner.setTelephone("2132146992");
+//
+//        PetType type = new PetType();
+//        type.setId(28);
+//        type.setName("deer");
+//        Faker faker = new Faker();
+//        Pet pet = PetController.generateNewRandomPet(owner, type);
+//
+//        ValidatableResponse response = given().baseUri(EnvReader.getBaseUri())
+//                .basePath(EnvReader.getBasePath())
+//                .port(EnvReader.getPort())
+//                .contentType(ContentType.JSON)
+//                .body(pet).log().all()
+//                .when()
+//                .post("/api/pets").prettyPeek()
+//                .then()
+//                .statusCode(HttpStatus.SC_CREATED);
+//    }
+//
+//    @Test
+//    public void addVisit() {
+//
+//        Owner owner = new Owner();
+//        owner.setId(202);
+//        owner.setFirstName("Shizuko");
+//        owner.setLastName("Schoen");
+//        owner.setAddress("52643 Franecki Burgs");
+//        owner.setCity("Lake Kyra");
+//        owner.setTelephone("2132146992");
+//
+//        PetType type = new PetType();
+//        type.setId(28);
+//        type.setName("deer");
+//
+//        Pet pet = new Pet();
+//        pet.setId(97);
+//        pet.setName("Crystal Ball");
+//        pet.setType(type);
+//        pet.setOwner(owner);
+//        pet.setBirthDate("1988/11/02");
+//
+//        Faker faker = new Faker();
+//        Visit visit = VisitController.generateNewRandomVisit(pet, type);
+//
+//        ValidatableResponse response = given().baseUri(EnvReader.getBaseUri())
+//                .port(EnvReader.getPort())
+//                .basePath(EnvReader.getBasePath())
+//                .contentType(ContentType.JSON)
+//                .body(visit)
+//                .when().log().all()
+//                .post("/api/visits").prettyPeek()
+//                .then()
+//                .statusCode(HttpStatus.SC_CREATED);
+//
+//        visit.setId(response.extract().jsonPath().getInt("id"));
+//
+//        given().baseUri(EnvReader.getBaseUri())
+//                .basePath(EnvReader.getBasePath())
+//                .port(EnvReader.getPort())
+//                .pathParam("visitId", visit.getId())
+//                .when()
+//                .get("/api/visits/{visitId}").prettyPeek()
+//                .then()
+//                .statusCode(HttpStatus.SC_OK)
+//                .body("id", is(visit.getId()));
+//    }
 }
