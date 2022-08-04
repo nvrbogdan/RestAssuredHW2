@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="952136a7-20f3-4bce-a41f-0b3aca935212" name="Changes" comment="" />
+    <list default="true" id="952136a7-20f3-4bce-a41f-0b3aca935212" name="Changes" comment="second commit">
+      <change afterPath="$PROJECT_DIR$/src/test/java/examples/FacebookTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/examples/OpenWeatherMapTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/examples/TwitterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +24,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="day3" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -32,89 +43,89 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/bnavrapescu/IdeaProjects/RaTraining"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/bnavrapescu/IdeaProjects/RaTraining&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="JUnit.PetClinicTestDay2.addVisit">
-    <configuration name="PetClinicTestDay2.addPet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+}</component>
+  <component name="RunManager" selected="JUnit.FacebookTest.addUserTest">
+    <configuration name="FacebookTest.addUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RaTraining" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.endava.petclinic.*" />
+          <option name="PATTERN" value="examples.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.endava.petclinic" />
-      <option name="MAIN_CLASS_NAME" value="com.endava.petclinic.PetClinicTestDay2" />
-      <option name="METHOD_NAME" value="addPet" />
+      <option name="PACKAGE_NAME" value="examples" />
+      <option name="MAIN_CLASS_NAME" value="examples.FacebookTest" />
+      <option name="METHOD_NAME" value="addUserTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PetClinicTestDay2.addVisit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OpenWeatherMapTest.getWeatherTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RaTraining" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.endava.petclinic.*" />
+          <option name="PATTERN" value="examples.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.endava.petclinic" />
-      <option name="MAIN_CLASS_NAME" value="com.endava.petclinic.PetClinicTestDay2" />
-      <option name="METHOD_NAME" value="addVisit" />
+      <option name="PACKAGE_NAME" value="examples" />
+      <option name="MAIN_CLASS_NAME" value="examples.OpenWeatherMapTest" />
+      <option name="METHOD_NAME" value="getWeatherTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PetClinicTestDay2.postOwnerTestWithObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OpenWeatherMapTest.getWeatherTestParam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RaTraining" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.endava.petclinic.*" />
+          <option name="PATTERN" value="examples.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.endava.petclinic" />
-      <option name="MAIN_CLASS_NAME" value="com.endava.petclinic.PetClinicTestDay2" />
-      <option name="METHOD_NAME" value="postOwnerTestWithObject" />
+      <option name="PACKAGE_NAME" value="examples" />
+      <option name="MAIN_CLASS_NAME" value="examples.OpenWeatherMapTest" />
+      <option name="METHOD_NAME" value="getWeatherTestParam(java.lang.String)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PetClinicTestDay2.postPetTestWithObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TwitterTest.getTweeterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RaTraining" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.endava.petclinic.*" />
+          <option name="PATTERN" value="examples.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.endava.petclinic" />
-      <option name="MAIN_CLASS_NAME" value="com.endava.petclinic.PetClinicTestDay2" />
-      <option name="METHOD_NAME" value="postPetTestWithObject" />
+      <option name="PACKAGE_NAME" value="examples" />
+      <option name="MAIN_CLASS_NAME" value="examples.TwitterTest" />
+      <option name="METHOD_NAME" value="getTweeterTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PetClinicTestDay2.postPetTypeTestWithObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TwitterTest.postTweetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RaTraining" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.endava.petclinic.*" />
+          <option name="PATTERN" value="examples.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.endava.petclinic" />
-      <option name="MAIN_CLASS_NAME" value="com.endava.petclinic.PetClinicTestDay2" />
-      <option name="METHOD_NAME" value="postPetTypeTestWithObject" />
+      <option name="PACKAGE_NAME" value="examples" />
+      <option name="MAIN_CLASS_NAME" value="examples.TwitterTest" />
+      <option name="METHOD_NAME" value="postTweetTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -122,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PetClinicTestDay2.addVisit" />
-        <item itemvalue="JUnit.PetClinicTestDay2.postPetTestWithObject" />
-        <item itemvalue="JUnit.PetClinicTestDay2.addPet" />
-        <item itemvalue="JUnit.PetClinicTestDay2.postPetTypeTestWithObject" />
-        <item itemvalue="JUnit.PetClinicTestDay2.postOwnerTestWithObject" />
+        <item itemvalue="JUnit.FacebookTest.addUserTest" />
+        <item itemvalue="JUnit.OpenWeatherMapTest.getWeatherTestParam" />
+        <item itemvalue="JUnit.OpenWeatherMapTest.getWeatherTest" />
+        <item itemvalue="JUnit.TwitterTest.getTweeterTest" />
+        <item itemvalue="JUnit.TwitterTest.postTweetTest" />
       </list>
     </recent_temporary>
   </component>
@@ -146,7 +157,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="day4" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
